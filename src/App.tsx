@@ -1,10 +1,15 @@
-import React, { FC } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppContainer from "./common/components/AppContainer";
+import AppRoutes from "./routes/AppRoutes";
 
-type AppProps = {
-  salam: string;
-};
-const App: FC<AppProps> = ({ salam }) => {
-  return <div>App</div>;
+const App = () => {
+  return (
+    <AppContainer>
+      <BrowserRouter basename="/">
+        <AppRoutes />
+      </BrowserRouter>
+    </AppContainer>
+  );
 };
 
 export default App;

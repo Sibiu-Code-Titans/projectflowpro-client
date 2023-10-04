@@ -1,3 +1,8 @@
-interface HomepageInitialState {}
+export interface HomepageInitialStateInterface {
+  counter: number;
+}
 
-export const HOMEPAGE_REDUCER_INITIAL_STATE: HomepageInitialState = {};
+export const HomepageReducerInitialState: Readonly<HomepageInitialStateInterface> =
+  {
+    counter: 0,
+  };

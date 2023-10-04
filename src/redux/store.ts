@@ -1,11 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import homepageReducer from "../pages/HomePage/data/reducers/homepageReducer/homepageReducer";
+import { rootReducer } from "./reducers";
 
 export const store = configureStore({
-  reducer: {
-    homepageReducer,
-  },
+  reducer: rootReducer,
 });
-
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;

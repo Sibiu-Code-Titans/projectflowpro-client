@@ -1,8 +1,11 @@
-export const HOMEPAGE_REDUCER_ACTIONS = {
-  // incrementByAmount: (state, action: PayloadAction<number>) => {
-  //   return {
-  //     ...state,
-  //     value: state.value + action.payload,
-  //   };
-  // },
+import { ActionType, createAction } from "typesafe-actions";
+
+const actions = {
+  incrementCounter: createAction(
+    "incrementCounter",
+    (payload: number) => payload
+  )(),
 };
+
+export type HomepageReducerAction = ActionType<typeof actions>;
+export const HomepageReducerActions = actions;

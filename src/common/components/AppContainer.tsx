@@ -5,7 +5,7 @@ interface AppContainerProps {
 }
 const AppContainer: FC<AppContainerProps> = ({ children }) => {
   return (
-    <div className="min-h-screen px-2 text-primary text-zinc-800">
+    <div className="min-h-screen px-2 text-primary">
       {children}
     </div>
   );

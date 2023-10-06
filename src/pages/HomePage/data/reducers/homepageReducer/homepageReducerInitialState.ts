@@ -1,8 +1,8 @@
 export interface HomepageInitialStateInterface {
-  counter: number;
+  data: any[];
 }
 
 export const HomepageReducerInitialState: Readonly<HomepageInitialStateInterface> =
   {
-    counter: 0,
+    data: [],
   };

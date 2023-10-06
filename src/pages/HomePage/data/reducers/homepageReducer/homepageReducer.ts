@@ -16,10 +16,10 @@ export const homepageReducer: Reducer<
   action: HomepageReducerAction
 ) => {
   switch (action.type) {
-    case getType(HomepageReducerActions.incrementCounter):
+    case getType(HomepageReducerActions.setData):
       return {
         ...state,
-        counter: state.counter + action.payload,
+        data: action.payload,
       };
 
     default:

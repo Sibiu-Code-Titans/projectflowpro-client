@@ -19,8 +19,8 @@ const PROButton: FC<Props> = ({
     <div
       onClick={onClick}
       className={cn(
-        "rounded-lg flex items-center cursor-pointer transition hover:shadow-md active:shadow-sm active:scale-95 gap-x-2 shadow-sm bg-zinc-800 bg-opacity-90 hover:bg-opacity-95 active:bg-opacity-100 w-fit px-2 py-1 text-white font-medium",
-        className
+        "flex w-fit cursor-pointer items-center gap-x-2 rounded-lg bg-zinc-800 bg-opacity-90 px-2 py-1 font-medium text-white shadow-sm transition hover:bg-opacity-95 hover:shadow-md active:scale-95 active:bg-opacity-100 active:shadow-sm",
+        className,
       )}
     >
       {leftIcon}

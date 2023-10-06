@@ -18,7 +18,7 @@ const TaskDetailsNavbar = () => {
         content="Back to tasks"
         leftIcon={<FaChevronLeft />}
         onClick={handleGoBack}
-        className="gap-x-4 pl-4 pr-10 py-1.5 mb-4 rounded-full"
+        className="mb-4 gap-x-4 rounded-full py-1.5 pl-4 pr-10"
       />
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-x-6 text-lg font-semibold">
@@ -28,12 +28,12 @@ const TaskDetailsNavbar = () => {
         <div className="flex items-center gap-x-2">
           <PROButton
             content="Save"
-            className="rounded-xl py-3 px-9 text-sm bg-purple-500"
+            className="rounded-xl bg-purple-500 px-9 py-3 text-sm"
             onClick={handleSave}
           />
           <PROButton
             content="Close Task"
-            className="rounded-xl py-3 px-9 text-sm bg-purple-100 text-purple-500"
+            className="rounded-xl bg-purple-100 px-9 py-3 text-sm text-purple-500"
             onClick={handleGoBack}
           />
         </div>

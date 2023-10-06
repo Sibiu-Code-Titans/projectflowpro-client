@@ -1,11 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import homepageReducer from "../pages/HomePage/data/reducers/homepageReducer/homepageReducer";
+import { rootReducer } from "./reducers";
+// Or from '@reduxjs/toolkit/query/react'
+import { setupListeners } from "@reduxjs/toolkit/query";
+import { homepageApi } from "../pages/HomePage/data/reducers/homepageReducer/homepageApi";
+import { testApi } from "../pages/HomePage/data/reducers/homepageReducer/testApi";
 
 export const store = configureStore({
-  reducer: {
-    homepageReducer,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat([homepageApi.middleware, testApi.middleware]),
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+setupListeners(store.dispatch);

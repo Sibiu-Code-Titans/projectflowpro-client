@@ -10,10 +10,12 @@ const TaskDetailsNavbar = () => {
     navigate(-1);
   };
 
-  const handleSave = () => {};
+  const handleSave = () => {
+    // Make request to BE to save changes
+  };
 
   return (
-    <div className="px-4">
+    <div>
       <PROButton
         content="Back to tasks"
         leftIcon={<FaChevronLeft />}

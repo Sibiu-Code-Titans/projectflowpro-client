@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { HEXCODE_OPACITY_10 } from "../../data/constants";
 
 type Props = {
   color: string;
@@ -9,7 +10,7 @@ const TaskStatusBadge: FC<Props> = ({ color, content }) => {
     <div
       style={{
         color,
-        backgroundColor: `${color}1A`,
+        backgroundColor: `${color}${HEXCODE_OPACITY_10}`,
         borderColor: color,
       }}
       className={

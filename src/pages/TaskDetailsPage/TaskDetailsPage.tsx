@@ -2,7 +2,7 @@ import TaskDetailsNavbar from "./components/TaskDetailsNavbar";
 
 const TaskDetailsPage = () => {
   return (
-    <div>
+    <div className="px-4">
       <TaskDetailsNavbar />
     </div>
   );

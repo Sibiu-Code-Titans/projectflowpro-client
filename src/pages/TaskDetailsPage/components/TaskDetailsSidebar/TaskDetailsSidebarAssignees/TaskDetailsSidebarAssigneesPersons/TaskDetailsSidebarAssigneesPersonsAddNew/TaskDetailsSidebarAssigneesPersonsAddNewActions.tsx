@@ -9,14 +9,13 @@ const TaskDetailsSidebarAssigneesPersonsAddNewActions: FC<Props> = ({
   noAssignees,
   showNewAssigneeDropdown,
 }) => {
-  if (showNewAssigneeDropdown || noAssignees) {
-    if (!noAssignees)
-      return (
-        <>
-          <FaBan className="cursor-pointer text-purple-500 transition-all hover:scale-105 hover:text-purple-600 active:scale-95" />
-          <span>Close</span>
-        </>
-      );
+  if (showNewAssigneeDropdown && !noAssignees) {
+    return (
+      <>
+        <FaBan className="cursor-pointer text-purple-500 transition-all hover:scale-105 hover:text-purple-600 active:scale-95" />
+        <span>Close</span>
+      </>
+    );
   }
 
   if (!noAssignees)

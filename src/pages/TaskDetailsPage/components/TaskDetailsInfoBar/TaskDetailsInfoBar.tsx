@@ -8,7 +8,7 @@ const TaskDetailsInfoBar = () => {
   const [progress] = useState(30);
 
   return (
-    <div className="flex w-3/4 items-center justify-around rounded-xl bg-white py-6 shadow-sm">
+    <div className="flex h-fit w-3/4 items-center justify-around rounded-xl bg-white py-6 shadow-sm">
       <TaskDetailsInfoBarSection
         dotColor="bg-purple-400"
         label="Date created"

@@ -24,7 +24,7 @@ const TaskDetailsInfoBarProgressDoughnut: FC<Props> = ({ progress }) => {
       type="doughnut"
       data={chartData}
       options={chartOptions}
-      className="h-16"
+      className="h-16 max-h-16"
     />
   );
 };

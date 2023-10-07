@@ -11,6 +11,10 @@ export default {
         primary: "rgb(39 39 42);",
         secondary: "#464255",
       },
+      borderWidth: {
+        1: "1px",
+        3: "3px",
+      },
     },
   },
   plugins: [],

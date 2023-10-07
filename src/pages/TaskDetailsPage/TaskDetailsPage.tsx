@@ -1,11 +1,15 @@
 import TaskDetailsInfoBar from "./components/TaskDetailsInfoBar/TaskDetailsInfoBar";
 import TaskDetailsNavbar from "./components/TaskDetailsNavbar";
+import TaskDetailsSidebar from "./components/TaskDetailsSidebar/TaskDetailsSidebar";
 
 const TaskDetailsPage = () => {
   return (
     <div className="flex flex-col gap-y-4 px-4">
       <TaskDetailsNavbar />
-      <TaskDetailsInfoBar />
+      <div className="flex gap-x-4">
+        <TaskDetailsInfoBar />
+        <TaskDetailsSidebar />
+      </div>
     </div>
   );
 };

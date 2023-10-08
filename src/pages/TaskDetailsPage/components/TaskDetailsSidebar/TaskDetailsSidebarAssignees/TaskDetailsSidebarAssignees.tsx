@@ -4,7 +4,7 @@ import TaskDetailsSidebarAssigneesPersons from "./TaskDetailsSidebarAssigneesPer
 import TaskDetailsSidebarAssigneesRemove from "./TaskDetailsSidebarAssigneesRemove";
 
 const TaskDetailsSidebarAssignees = () => {
-  const ASSIGNEES: TaskDetailsSidebarAssigneeModel[] = [
+  const AVAILABLE_ASSIGNEES: TaskDetailsSidebarAssigneeModel[] = [
     {
       id: "1",
       image:
@@ -20,7 +20,7 @@ const TaskDetailsSidebarAssignees = () => {
       isSelected: false,
     },
   ];
-  const [assignees, setAssignees] = useState(ASSIGNEES);
+  const [assignees, setAssignees] = useState(AVAILABLE_ASSIGNEES);
   const [showNewAssigneeDropdown, setShowNewAssigneeDropdown] = useState(false);
 
   return (

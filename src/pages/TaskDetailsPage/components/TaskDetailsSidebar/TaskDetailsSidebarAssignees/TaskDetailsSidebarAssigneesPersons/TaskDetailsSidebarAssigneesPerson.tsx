@@ -42,7 +42,7 @@ const TaskDetailsSidebarAssigneesPerson: FC<Props> = ({
 
   return (
     <div
-      className="border-1 flex cursor-pointer items-center justify-between rounded-xl border-zinc-300 px-3 py-1.5 text-sm shadow-sm transition-all hover:shadow-md active:scale-95"
+      className="flex cursor-pointer items-center justify-between rounded-xl border-1 border-zinc-300 px-3 py-1.5 text-sm shadow-sm transition-all hover:shadow-md active:scale-95"
       onClick={handleSelect}
     >
       <div className="flex items-center gap-x-2">

@@ -1,12 +1,15 @@
 export type TaskDetailsSidebarAssigneeModel = {
-  id: string;
-  image: string;
   isSelected: boolean;
-  name: string;
-};
+} & TaskDetailsSidebarPersonModel;
 
 export type TaskDetailsSidebarPersonModel = {
   id: string;
   image: string;
   name: string;
+};
+
+export type TaskDetailsSidebarTagModel = {
+  id: string;
+  name: string;
+  color: string;
 };

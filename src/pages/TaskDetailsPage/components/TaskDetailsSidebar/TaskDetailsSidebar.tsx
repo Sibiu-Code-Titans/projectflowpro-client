@@ -1,6 +1,7 @@
 import TaskDetailsSidebarAssignees from "./TaskDetailsSidebarAssignees/TaskDetailsSidebarAssignees";
 import TaskDetailsSidebarReportingTo from "./TaskDetailsSidebarReportingTo";
-import TaskDetailsSidebarWatching from "./TaskDetailsSidebarWatching";
+import TaskDetailsSidebarWatching from "./TaskDetailsSidebarSubscribed/TaskDetailsSidebarSubscribed";
+import TaskDetailsSidebarTags from "./TaskDetailsSidebarTags/TaskDetailsSidebarTags";
 
 const TaskDetailsSidebar = () => {
   return (
@@ -8,6 +9,7 @@ const TaskDetailsSidebar = () => {
       <TaskDetailsSidebarAssignees />
       <TaskDetailsSidebarReportingTo />
       <TaskDetailsSidebarWatching />
+      <TaskDetailsSidebarTags />
     </div>
   );
 };

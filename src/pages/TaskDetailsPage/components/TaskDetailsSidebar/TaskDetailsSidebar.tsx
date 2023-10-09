@@ -5,7 +5,7 @@ import TaskDetailsSidebarTags from "./TaskDetailsSidebarTags/TaskDetailsSidebarT
 
 const TaskDetailsSidebar = () => {
   return (
-    <div className="flex w-1/4 flex-col gap-y-4 rounded-xl bg-white p-6 shadow-sm">
+    <div className="flex max-h-[80vh] w-1/4 flex-col gap-y-4 overflow-y-scroll rounded-xl bg-white p-6 shadow-sm">
       <TaskDetailsSidebarAssignees />
       <TaskDetailsSidebarReportingTo />
       <TaskDetailsSidebarSubscribed />

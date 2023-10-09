@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { cn, getFormattedDateOrValue } from "../../../../common/data/utils";
+import { cn, getFormattedDateOrValue } from "../../../../../common/data/utils";
 
 type Props = {
   dotColor: string;

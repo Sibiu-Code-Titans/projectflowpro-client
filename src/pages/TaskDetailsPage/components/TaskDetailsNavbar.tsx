@@ -24,7 +24,7 @@ const TaskDetailsNavbar = () => {
       />
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-x-6 text-lg font-semibold">
-          <TaskStatusBadge color="#00f957" content="A2. UI Design" />
+          <TaskStatusBadge />
           <div>Design styleguide and fluid grid system</div>
         </div>
         <div className="flex items-center gap-x-2">

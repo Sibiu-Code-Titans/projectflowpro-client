@@ -2,6 +2,7 @@ import { TaskDetailsSidebarPersonModel } from "../../pages/TaskDetailsPage/data/
 
 export const HEXCODE_OPACITY_10 = "1A";
 export const DATE_FORMAT = "dd MMM, yyyy";
+export const MAX_N_ROWS = 3;
 
 export const ALL_PERSONS: TaskDetailsSidebarPersonModel[] = [
   {

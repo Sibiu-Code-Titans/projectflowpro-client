@@ -38,7 +38,7 @@ const TaskStatusBadge: FC = () => {
           borderColor: selectedStatus.color,
           textShadow: `1px 1px 2px ${selectedStatus.color}80`,
         }}
-        className="relative w-fit cursor-pointer rounded-lg border-2 px-4 py-1.5 text-sm shadow-md outline-2"
+        className="relative w-max cursor-pointer rounded-lg border-2 px-4 py-1.5 text-sm shadow-md outline-2"
       >
         <div className="font-semibold">{selectedStatus.name}</div>
         <Dropdown

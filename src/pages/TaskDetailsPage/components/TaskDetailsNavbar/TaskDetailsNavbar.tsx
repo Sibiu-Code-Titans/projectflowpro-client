@@ -1,7 +1,8 @@
 import { FaChevronLeft } from "react-icons/fa";
 import { useNavigate } from "react-router";
-import PROButton from "../../../common/components/PROButton";
-import TaskStatusBadge from "../../../common/components/Task/TaskStatusBadge";
+import PROButton from "../../../../common/components/PROButton";
+import TaskStatusBadge from "../../../../common/components/Task/TaskStatusBadge";
+import TaskDetailsNavbarTitle from "./TaskDetailsNavbarTitle";
 
 const TaskDetailsNavbar = () => {
   const navigate = useNavigate();
@@ -23,9 +24,9 @@ const TaskDetailsNavbar = () => {
         className="mb-4 gap-x-4 rounded-full py-1.5 pl-4 pr-10"
       />
       <div className="flex w-full items-center justify-between">
-        <div className="flex items-center gap-x-6 text-lg font-semibold">
+        <div className="flex flex-1 items-center text-lg font-semibold">
           <TaskStatusBadge />
-          <div>Design styleguide and fluid grid system</div>
+          <TaskDetailsNavbarTitle />
         </div>
         <div className="flex items-center gap-x-2">
           <PROButton

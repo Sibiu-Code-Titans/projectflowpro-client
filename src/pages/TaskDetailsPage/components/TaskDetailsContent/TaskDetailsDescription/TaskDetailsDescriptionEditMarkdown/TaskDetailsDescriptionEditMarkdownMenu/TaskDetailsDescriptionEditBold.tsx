@@ -13,7 +13,7 @@ const TaskDetailsDescriptionEditBold = () => {
       disabled={!editor.can().chain().toggleBold().run()}
       className={cn(
         editor.isActive("bold") ? "rounded-md bg-zinc-200" : "",
-        "cursor-pointer rounded-md p-2 transition-all hover:bg-zinc-100 hover:shadow-md active:scale-95",
+        "tiptap-markdown-option",
       )}
     >
       <FaBold />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaEllipsisH } from "react-icons/fa";
-import TaskDetailsDescriptionEditMorePanel from "./TaskDetailsDescriptionEditMorePanel";
+import TaskDetailsDescriptionEditMorePanel from "./TaskDetailsDescriptionEditMorePanel/TaskDetailsDescriptionEditMorePanel";
 
 const TaskDetailsDescriptionEditMore = () => {
   const [showMore, setShowMore] = useState(false);
@@ -9,7 +9,7 @@ const TaskDetailsDescriptionEditMore = () => {
     <div className="relative">
       <div
         onClick={() => setShowMore((prev) => !prev)}
-        className="cursor-pointer rounded-md p-2 transition-all hover:bg-zinc-100 hover:shadow-md active:scale-95"
+        className="tiptap-markdown-option"
       >
         <FaEllipsisH />
       </div>

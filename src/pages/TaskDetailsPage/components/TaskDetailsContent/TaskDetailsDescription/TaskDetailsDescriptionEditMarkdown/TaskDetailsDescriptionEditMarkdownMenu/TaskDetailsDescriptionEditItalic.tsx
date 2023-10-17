@@ -13,7 +13,7 @@ const TaskDetailsDescriptionEditItalic = () => {
       disabled={!editor.can().chain().toggleItalic().run()}
       className={cn(
         editor.isActive("italic") ? "bg-zinc-200 shadow-inner" : "",
-        "cursor-pointer rounded-md p-2 transition-all hover:bg-zinc-100 hover:shadow-md active:scale-95",
+        "tiptap-markdown-option",
       )}
     >
       <FaItalic />

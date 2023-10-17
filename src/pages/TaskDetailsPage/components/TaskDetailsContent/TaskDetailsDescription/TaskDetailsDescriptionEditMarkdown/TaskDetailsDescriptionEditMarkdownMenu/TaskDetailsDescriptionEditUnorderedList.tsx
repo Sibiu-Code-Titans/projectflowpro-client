@@ -13,7 +13,7 @@ const TaskDetailsDescriptionEditUnorderedList = () => {
     <div
       onClick={() => editor.chain().focus().toggleBulletList().run()}
       className={cn(
-        "cursor-pointer rounded-md p-2 transition-all hover:bg-zinc-100 hover:shadow-md active:scale-95",
+        "tiptap-markdown-option",
         editor.isActive("bulletList") ? "bg-zinc-200 shadow-inner" : "",
       )}
     >

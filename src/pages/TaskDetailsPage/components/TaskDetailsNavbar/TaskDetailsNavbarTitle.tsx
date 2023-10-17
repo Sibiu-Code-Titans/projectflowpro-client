@@ -29,7 +29,7 @@ const TaskDetailsNavbarTitle = () => {
   return (
     <div className="w-full px-4">
       <textarea
-        className="w-full cursor-pointer resize-none overflow-visible rounded-md bg-transparent px-2 py-0.5 text-xl outline-none transition-all hover:bg-zinc-200"
+        className="w-full cursor-text resize-none overflow-visible rounded-md bg-transparent px-2 py-0.5 text-xl outline-none transition-all hover:bg-zinc-200/30"
         onChange={handleChange}
         ref={titleRef}
         rows={1}

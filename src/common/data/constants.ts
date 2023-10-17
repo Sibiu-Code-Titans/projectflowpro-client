@@ -1,4 +1,5 @@
-import { TaskDetailsSidebarPersonModel } from "../../pages/TaskDetailsPage/data/TaskDetailsSidebarModels";
+import { TaskDetailsDescriptionHeadingOptionModel } from "../../pages/TaskDetailsPage/data/models/TaskDetailsDescriptionModels";
+import { TaskDetailsSidebarPersonModel } from "../../pages/TaskDetailsPage/data/models/TaskDetailsSidebarModels";
 
 export const HEXCODE_OPACITY_10 = "1A";
 export const DATE_FORMAT = "dd MMM, yyyy";
@@ -20,7 +21,7 @@ export const ALL_PERSONS: TaskDetailsSidebarPersonModel[] = [
   {
     id: "2",
     image:
-      "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1697274000&v=beta&t=dG6zD9fn4N0UgyHSYYzyd6kEk3LcQUZB0liQ6oxg1_Y",
+      "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1697965200&v=beta&t=F2olugojRgUIzFGy-t3eDnAkzB-XEvXhU7u3r9-SDiE",
     name: "Darius Rusu",
   },
   {
@@ -51,5 +52,48 @@ export const ALL_TAGS = [
     id: "3",
     name: "Testing",
     color: "#ff00ff",
+  },
+];
+
+export const COLORS_PANEL_OPTIONS = [
+  ["#172b4d", "#758195", "#fff"],
+  ["#0055cc", "#1d7afc", "#cce0ff"],
+  ["#206A83", "#2898bd", "#c6edfb"],
+  ["#216e4e", "#22a06b", "#baf3db"],
+  ["#e56910", "#fea362", "#f8e6a0"],
+  ["#ae2e24", "#c9372c", "#ffd5d2"],
+  ["#5e4db2", "#8270db", "#dfd8fd"],
+];
+
+export const HEADINGS_OPTIONS: TaskDetailsDescriptionHeadingOptionModel[] = [
+  {
+    level: 0,
+    label: "Normal text",
+    name: "Normal text",
+  },
+  {
+    level: 1,
+    label: "Heading 1",
+    name: "<h1>Heading 1</h1>",
+  },
+  {
+    level: 2,
+    label: "Heading 2",
+    name: "<h2>Heading 2</h2>",
+  },
+  {
+    level: 3,
+    label: "Heading 3",
+    name: "<h3>Heading 3</h3>",
+  },
+  {
+    level: 4,
+    label: "Heading 4",
+    name: "<h4>Heading 4</h4>",
+  },
+  {
+    level: 5,
+    label: "Heading 5",
+    name: "<h5>Heading 5</h5>",
   },
 ];

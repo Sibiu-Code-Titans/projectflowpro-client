@@ -2,7 +2,7 @@ import { DropdownChangeEvent } from "primereact/dropdown";
 import { useState } from "react";
 import TaskDetailsSidebarAddNew from "../../../../../common/components/Task/TaskDetailsSidebarNewPerson/TaskDetailsSidebarAddNew";
 import { ALL_TAGS } from "../../../../../common/data/constants";
-import { TaskDetailsSidebarTagModel } from "../../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarTagModel } from "../../../data/models/TaskDetailsSidebarModels";
 import TaskDetailsSidebarTag from "./TaskDetailsSidebarTag";
 
 const TaskDetailsSidebarTags = () => {

@@ -1,5 +1,5 @@
 import { Dispatch, FC, SetStateAction } from "react";
-import { TaskDetailsSidebarTagModel } from "../../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarTagModel } from "../../../data/models/TaskDetailsSidebarModels";
 
 type Props = {
   tags: TaskDetailsSidebarTagModel[];

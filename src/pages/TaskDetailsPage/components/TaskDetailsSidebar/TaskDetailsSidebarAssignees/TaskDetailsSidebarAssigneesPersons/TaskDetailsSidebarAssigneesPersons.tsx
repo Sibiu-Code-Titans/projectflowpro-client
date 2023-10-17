@@ -2,7 +2,7 @@ import { DropdownChangeEvent } from "primereact/dropdown";
 import { Dispatch, FC, SetStateAction } from "react";
 import TaskDetailsSidebarAddNew from "../../../../../../common/components/Task/TaskDetailsSidebarNewPerson/TaskDetailsSidebarAddNew";
 import { ALL_PERSONS } from "../../../../../../common/data/constants";
-import { TaskDetailsSidebarAssigneeModel } from "../../../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarAssigneeModel } from "../../../../data/models/TaskDetailsSidebarModels";
 import TaskDetailsSidebarAssigneesPerson from "./TaskDetailsSidebarAssigneesPerson";
 
 type Props = {

@@ -1,6 +1,6 @@
 import "primereact/resources/primereact.min.css";
 import "primereact/resources/themes/lara-light-blue/theme.css";
-import "./index.css";
+import "./index.scss";
 
 import { PrimeReactProvider } from "primereact/api";
 import { StrictMode } from "react";

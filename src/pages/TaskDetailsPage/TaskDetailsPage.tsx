@@ -1,5 +1,5 @@
 import TaskDetailsContent from "./components/TaskDetailsContent/TaskDetailsContent";
-import TaskDetailsNavbar from "./components/TaskDetailsNavbar";
+import TaskDetailsNavbar from "./components/TaskDetailsNavbar/TaskDetailsNavbar";
 import TaskDetailsSidebar from "./components/TaskDetailsSidebar/TaskDetailsSidebar";
 
 const TaskDetailsPage = () => {

@@ -3,7 +3,7 @@ import { useState } from "react";
 import TaskDetailsSidebarAddNew from "../../../../common/components/Task/TaskDetailsSidebarNewPerson/TaskDetailsSidebarAddNew";
 import TaskDetailsSidebarPersonsPreview from "../../../../common/components/Task/TaskDetailsSidebarPersonsPreview";
 import { ALL_PERSONS } from "../../../../common/data/constants";
-import { TaskDetailsSidebarPersonModel } from "../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarPersonModel } from "../../data/models/TaskDetailsSidebarModels";
 
 const TaskDetailsSidebarReportingTo = () => {
   const REPORTING_TO_PERSONS: TaskDetailsSidebarPersonModel[] = [
@@ -16,7 +16,7 @@ const TaskDetailsSidebarReportingTo = () => {
     {
       id: "2",
       image:
-        "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1697274000&v=beta&t=dG6zD9fn4N0UgyHSYYzyd6kEk3LcQUZB0liQ6oxg1_Y",
+        "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1697965200&v=beta&t=F2olugojRgUIzFGy-t3eDnAkzB-XEvXhU7u3r9-SDiE",
       name: "Darius Rusu",
     },
   ];

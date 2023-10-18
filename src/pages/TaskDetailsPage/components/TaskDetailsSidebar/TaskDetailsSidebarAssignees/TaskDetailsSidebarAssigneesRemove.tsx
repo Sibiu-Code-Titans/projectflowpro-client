@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { FaMinus } from "react-icons/fa";
-import { TaskDetailsSidebarAssigneeModel } from "../../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarAssigneeModel } from "../../../data/models/TaskDetailsSidebarModels";
 
 type Props = {
   assignees: TaskDetailsSidebarAssigneeModel[];

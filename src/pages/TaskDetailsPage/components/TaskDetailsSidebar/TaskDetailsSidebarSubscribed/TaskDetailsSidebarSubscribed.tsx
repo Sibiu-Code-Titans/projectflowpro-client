@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TaskDetailsSidebarPersonsPreview from "../../../../../common/components/Task/TaskDetailsSidebarPersonsPreview";
-import { TaskDetailsSidebarPersonModel } from "../../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarPersonModel } from "../../../data/models/TaskDetailsSidebarModels";
 import TaskDetailsSidebarSubscribedAction from "./TaskDetailsSidebarSubscribedAction";
 
 const TaskDetailsSidebarSubscribed = () => {

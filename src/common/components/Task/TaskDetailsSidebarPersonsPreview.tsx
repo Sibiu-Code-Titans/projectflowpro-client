@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { TaskDetailsSidebarPersonModel } from "../../../pages/TaskDetailsPage/data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarPersonModel } from "../../../pages/TaskDetailsPage/data/models/TaskDetailsSidebarModels";
 
 type Props = {
   assignedPersons: TaskDetailsSidebarPersonModel[];

@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { cn } from "../../../../../../common/data/utils";
-import { TaskDetailsSidebarAssigneeModel } from "../../../../data/TaskDetailsSidebarModels";
+import { TaskDetailsSidebarAssigneeModel } from "../../../../data/models/TaskDetailsSidebarModels";
 
 type Props = {
   id: string;

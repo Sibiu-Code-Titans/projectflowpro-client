@@ -16,7 +16,7 @@ const TaskDetailsSidebarReportingTo = () => {
     {
       id: "2",
       image:
-        "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1697965200&v=beta&t=F2olugojRgUIzFGy-t3eDnAkzB-XEvXhU7u3r9-SDiE",
+        "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1698696000&v=beta&t=EsfPqL3z9-fIY_HokVyvm_srcuCXWMoMLw8b959m8Ac",
       name: "Darius Rusu",
     },
   ];

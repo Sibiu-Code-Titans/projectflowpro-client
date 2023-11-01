@@ -1,14 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { rootReducer } from "./reducers";
-// Or from '@reduxjs/toolkit/query/react'
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { homepageApi } from "../pages/HomePage/data/reducers/homepageReducer/homepageApi";
-import { testApi } from "../pages/HomePage/data/reducers/homepageReducer/testApi";
+import { taskDetailsPageApi } from "../pages/TaskDetailsPage/data/reducers/taskDetailsPageReducer/taskDetailsPageApi";
+import { rootReducer } from "./reducers";
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat([homepageApi.middleware, testApi.middleware]),
+    getDefaultMiddleware().concat([taskDetailsPageApi.middleware]),
 });
 
 setupListeners(store.dispatch);

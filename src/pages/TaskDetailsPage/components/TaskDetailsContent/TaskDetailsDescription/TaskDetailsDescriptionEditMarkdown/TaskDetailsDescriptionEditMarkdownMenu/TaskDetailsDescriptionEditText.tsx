@@ -26,7 +26,7 @@ const TaskDetailsDescriptionEditText = () => {
 
     setSelectedHeading(headingToSelect);
 
-    if (e.value.level === 0) {
+    if (headingToSelect.level === 0) {
       editor.chain().focus().setParagraph().run();
     } else {
       editor.chain().focus().toggleHeading({ level: e.value.level }).run();
@@ -34,17 +34,15 @@ const TaskDetailsDescriptionEditText = () => {
   };
 
   return (
-    <>
-      <Dropdown
-        className="bg-zinc-50 text-xs shadow-none"
-        itemTemplate={getItemTemplate}
-        onChange={selectHeading}
-        options={HEADINGS_OPTIONS}
-        placeholder="Normal text"
-        optionLabel="label"
-        value={selectedHeading}
-      />
-    </>
+    <Dropdown
+      className="bg-zinc-50 text-xs shadow-none"
+      itemTemplate={getItemTemplate}
+      onChange={selectHeading}
+      options={HEADINGS_OPTIONS}
+      placeholder="Normal text"
+      optionLabel="label"
+      value={selectedHeading}
+    />
   );
 };
 

@@ -1,5 +1,15 @@
+import { Color } from "@tiptap/extension-color";
+import Link from "@tiptap/extension-link";
+import { ListItem } from "@tiptap/extension-list-item";
+import Mention from "@tiptap/extension-mention";
+import Placeholder from "@tiptap/extension-placeholder";
+import TextStyle from "@tiptap/extension-text-style";
+import Underline from "@tiptap/extension-underline";
+import StarterKit from "@tiptap/starter-kit";
+import suggestion from "../../pages/TaskDetailsPage/components/TaskDetailsContent/TaskDetailsDescription/TaskDetailsDescriptionEditMarkdown/TaskDetailsDescriptionEditMarkdownMenu/TaskDetailsDescriptionEditMention/suggestion";
 import { TaskDetailsDescriptionHeadingOptionModel } from "../../pages/TaskDetailsPage/data/models/TaskDetailsDescriptionModels";
 import { TaskDetailsSidebarPersonModel } from "../../pages/TaskDetailsPage/data/models/TaskDetailsSidebarModels";
+import { TaskStatusModel } from "./models/TaskModels";
 
 export const HEXCODE_OPACITY_10 = "1A";
 export const DATE_FORMAT = "dd MMM, yyyy";
@@ -21,7 +31,7 @@ export const ALL_PERSONS: TaskDetailsSidebarPersonModel[] = [
   {
     id: "2",
     image:
-      "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1697965200&v=beta&t=F2olugojRgUIzFGy-t3eDnAkzB-XEvXhU7u3r9-SDiE",
+      "https://media.licdn.com/dms/image/D4E35AQGLfmRiXaiEdA/profile-framedphoto-shrink_800_800/0/1686831931072?e=1698696000&v=beta&t=EsfPqL3z9-fIY_HokVyvm_srcuCXWMoMLw8b959m8Ac",
     name: "Darius Rusu",
   },
   {
@@ -53,6 +63,13 @@ export const ALL_TAGS = [
     name: "Testing",
     color: "#ff00ff",
   },
+];
+
+export const STATUSES: TaskStatusModel[] = [
+  { name: "A0. Backlog", color: "#ff00ff" },
+  { name: "A1. Todo", color: "#FF7F50" },
+  { name: "B1. In Development", color: "#FF8080" },
+  { name: "B2A. Blocked", color: "#52d1ff" },
 ];
 
 export const COLORS_PANEL_OPTIONS = [
@@ -96,4 +113,33 @@ export const HEADINGS_OPTIONS: TaskDetailsDescriptionHeadingOptionModel[] = [
     label: "Heading 5",
     name: "<h5>Heading 5</h5>",
   },
+];
+
+export const EDITOR_PROVIDER_EXTENSIONS = [
+  Color.configure({ types: [TextStyle.name, ListItem.name] }),
+  TextStyle,
+  Underline,
+  Link.configure({
+    openOnClick: false,
+    linkOnPaste: true,
+  }),
+  StarterKit.configure({
+    bulletList: {
+      keepMarks: true,
+      keepAttributes: false,
+    },
+    orderedList: {
+      keepMarks: true,
+      keepAttributes: false,
+    },
+  }),
+  Mention.configure({
+    HTMLAttributes: {
+      class: "mention",
+    },
+    suggestion,
+  }),
+  Placeholder.configure({
+    placeholder: "Type @ to mention and notify someone",
+  }),
 ];

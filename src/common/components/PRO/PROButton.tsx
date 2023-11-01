@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { cn } from "../data/utils";
+import { cn } from "../../data/utils";
 
 type Props = {
   className?: string;

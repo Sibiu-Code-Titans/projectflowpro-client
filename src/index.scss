@@ -20,7 +20,21 @@ body {
 
 .tiptap {
   > * + * {
-    margin-top: 0.75em;
+    margin-top: 0.25em;
+  }
+
+  a {
+    @apply cursor-pointer font-medium text-blue-500 underline transition-all hover:text-blue-400;
+  }
+
+  p {
+    &.is-editor-empty:first-child::before {
+      color: #adb5bd;
+      content: attr(data-placeholder);
+      float: left;
+      height: 0;
+      pointer-events: none;
+    }
   }
 
   ul,
@@ -76,4 +90,16 @@ body {
 
 .tiptap-markdown-option {
   @apply cursor-pointer rounded-md p-2 transition-all hover:bg-zinc-100 hover:shadow-md active:scale-95;
+}
+
+.truncate-prose {
+  & > div {
+    @apply w-2/5 truncate;
+  }
+}
+
+.p-datepicker-calendar-container {
+  td {
+    padding: 0rem;
+  }
 }

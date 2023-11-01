@@ -1,15 +1,39 @@
 import { Dropdown, DropdownChangeEvent } from "primereact/dropdown";
+import { Skeleton } from "primereact/skeleton";
 import { FC, useState } from "react";
-import { HEXCODE_OPACITY_10 } from "../../data/constants";
+import { HEXCODE_OPACITY_10, STATUSES } from "../../data/constants";
+import { TaskStatusModel } from "../../data/models/TaskModels";
+import { cn } from "../../data/utils";
 
-const TaskStatusBadge: FC = () => {
-  const STATUSES = [
-    { name: "A0. Backlog", color: "#ff00ff" },
-    { name: "A1. Todo", color: "#FF7F50" },
-    { name: "B1. In Development", color: "#FF8080" },
-    { name: "B2A. Blocked", color: "#52d1ff" },
-  ];
-  const [selectedStatus, setSelectedStatus] = useState(STATUSES[3]);
+type Props = {
+  isLoading: boolean;
+  onChange?: () => void;
+  size?: "sm" | "base";
+  status: TaskStatusModel;
+};
+const TaskStatusBadge: FC<Props> = ({
+  isLoading,
+  size = "base",
+  status,
+  onChange,
+}) => {
+  const [selectedStatus, setSelectedStatus] = useState(status);
+
+  const getSize = () => {
+    switch (size) {
+      case "sm":
+        return {
+          badge: "px-3 py-1 text-xs",
+          skeleton: { height: "24px", width: "67px" },
+        };
+      case "base":
+      default:
+        return {
+          badge: "px-4 py-1.5 text-sm",
+          skeleton: { height: "31px", width: "81px" },
+        };
+    }
+  };
 
   const statusTemplate = (option: any) => {
     return (
@@ -29,29 +53,43 @@ const TaskStatusBadge: FC = () => {
     );
   };
 
+  const badgeClassName = cn(
+    getSize().badge,
+    "relative w-max cursor-pointer rounded-lg border-2 shadow-md outline-2",
+  );
+
   return (
     <div>
-      <div
-        style={{
-          color: selectedStatus.color,
-          backgroundColor: `${selectedStatus.color}${HEXCODE_OPACITY_10}`,
-          borderColor: selectedStatus.color,
-          textShadow: `1px 1px 2px ${selectedStatus.color}80`,
-        }}
-        className="relative w-max cursor-pointer rounded-lg border-2 px-4 py-1.5 text-sm shadow-md outline-2"
-      >
-        <div className="font-semibold">{selectedStatus.name}</div>
-        <Dropdown
-          value={selectedStatus}
-          onChange={(e: DropdownChangeEvent) => setSelectedStatus(e.value)}
-          options={STATUSES}
-          optionLabel="name"
-          placeholder="Select a Country"
-          className="absolute left-0 top-0 h-full w-full opacity-0"
-          panelClassName="w-min"
-          itemTemplate={statusTemplate}
+      {isLoading ? (
+        <Skeleton
+          height={getSize().skeleton.height}
+          width={getSize().skeleton.width}
         />
-      </div>
+      ) : (
+        <div
+          style={{
+            color: selectedStatus.color,
+            backgroundColor: `${selectedStatus.color}${HEXCODE_OPACITY_10}`,
+            borderColor: selectedStatus.color,
+            textShadow: `1px 1px 2px ${selectedStatus.color}80`,
+          }}
+          className={badgeClassName}
+        >
+          <div className="font-semibold">{selectedStatus.name}</div>
+          {onChange && (
+            <Dropdown
+              value={selectedStatus}
+              onChange={(e: DropdownChangeEvent) => setSelectedStatus(e.value)}
+              options={STATUSES}
+              optionLabel="name"
+              placeholder="Select a Country"
+              className="absolute left-0 top-0 h-full w-full opacity-0"
+              panelClassName="w-min"
+              itemTemplate={statusTemplate}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 };

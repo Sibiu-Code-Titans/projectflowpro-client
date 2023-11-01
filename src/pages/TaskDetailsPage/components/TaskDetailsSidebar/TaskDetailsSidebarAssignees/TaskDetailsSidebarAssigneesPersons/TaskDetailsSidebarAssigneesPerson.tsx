@@ -1,4 +1,5 @@
 import { Dispatch, FC, SetStateAction } from "react";
+import TaskPersonImage from "../../../../../../common/components/Task/TaskPersonImage";
 import { cn } from "../../../../../../common/data/utils";
 import { TaskDetailsSidebarAssigneeModel } from "../../../../data/models/TaskDetailsSidebarModels";
 
@@ -46,11 +47,7 @@ const TaskDetailsSidebarAssigneesPerson: FC<Props> = ({
       onClick={handleSelect}
     >
       <div className="flex items-center gap-x-2">
-        <img
-          src={image}
-          alt={`${name}-image`}
-          className="h-8 w-8 rounded-full shadow-md"
-        />
+        <TaskPersonImage size="sm" name={name} url="" src={image} />
         <div className="text-zinc-700">{name}</div>
       </div>
       <div className={checkmarkClassName}></div>

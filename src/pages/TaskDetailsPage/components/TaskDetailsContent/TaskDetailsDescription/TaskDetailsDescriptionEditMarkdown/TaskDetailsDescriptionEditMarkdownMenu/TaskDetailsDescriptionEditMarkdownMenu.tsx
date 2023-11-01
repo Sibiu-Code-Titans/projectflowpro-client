@@ -6,7 +6,6 @@ import TaskDetailsDescriptionEditImages from "./TaskDetailsDescriptionEditImages
 import TaskDetailsDescriptionEditInfo from "./TaskDetailsDescriptionEditInfo";
 import TaskDetailsDescriptionEditItalic from "./TaskDetailsDescriptionEditItalic";
 import TaskDetailsDescriptionEditLink from "./TaskDetailsDescriptionEditLink";
-import TaskDetailsDescriptionEditMention from "./TaskDetailsDescriptionEditMention";
 import TaskDetailsDescriptionEditMore from "./TaskDetailsDescriptionEditMore/TaskDetailsDescriptionEditMore";
 import TaskDetailsDescriptionEditOrderedList from "./TaskDetailsDescriptionEditOrderedList";
 import TaskDetailsDescriptionEditTable from "./TaskDetailsDescriptionEditTable";
@@ -29,7 +28,6 @@ const TaskDetailsDescriptionEditMarkdownMenu = () => {
       <Divider layout="vertical" className="mx-0.5 h-1 w-0.5 bg-zinc-200" />
       <TaskDetailsDescriptionEditLink />
       <TaskDetailsDescriptionEditImages />
-      <TaskDetailsDescriptionEditMention />
       <TaskDetailsDescriptionEditTable />
       <TaskDetailsDescriptionEditCode />
       <TaskDetailsDescriptionEditInfo />
